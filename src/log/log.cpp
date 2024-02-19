@@ -34,6 +34,11 @@ Log::~Log() {
     }
 }
 
+
+bool Log::IsOpen() {
+    return m_isopen;
+}
+
 // 获取日志级别
 int Log::GetLevel() {
     std::lock_guard<std::mutex> lck(m_mtx);
